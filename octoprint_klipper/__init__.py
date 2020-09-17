@@ -100,8 +100,6 @@ class KlipperPlugin(
             filepath = os.path.expanduser(
                self._settings.get(["configuration", "configpath"])
             )
-            data["config"] = data["config"].encode('utf-8')
-
             f = open(filepath, "w")
             f.write(data["config"])
             f.close()
